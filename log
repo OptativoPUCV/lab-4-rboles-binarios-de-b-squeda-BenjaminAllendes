@@ -625,3 +625,21 @@ treemap.c:81:12: note: declared here
             ^~~~~~~
 cc1.exe: all warnings being treated as errors
 70ce0f9
+Wed, Apr 30, 2025 12:45:26 AM: 
+Compilation failed
+In file included from test.c:4:0:
+treemap.c: In function 'firstTreeMap':
+treemap.c:170:32: error: passing argument 1 of 'minimum' from incompatible pointer type [-Werror=incompatible-pointer-types]
+     TreeNode *minimo = minimum(tree, tree->root) ;
+                                ^~~~
+treemap.c:81:12: note: expected 'TreeNode * {aka struct TreeNode *}' but argument is of type 'TreeMap * {aka struct TreeMap *}'
+ TreeNode * minimum(TreeNode * x){
+            ^~~~~~~
+treemap.c:170:24: error: too many arguments to function 'minimum'
+     TreeNode *minimo = minimum(tree, tree->root) ;
+                        ^~~~~~~
+treemap.c:81:12: note: declared here
+ TreeNode * minimum(TreeNode * x){
+            ^~~~~~~
+cc1.exe: all warnings being treated as errors
+c1381ce
