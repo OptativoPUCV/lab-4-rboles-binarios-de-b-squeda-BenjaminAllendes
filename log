@@ -195,3 +195,28 @@ treemap.c:83:2: error: stray '\277' in program
  ¿            tree->current  = tree->current->left ;
   ^
 20cb9ab
+Tue, Apr 29, 2025  8:52:50 PM: 
+ treemap.c | 1 -
+ 1 file changed, 1 deletion(-)
+Compilation failed
+In file included from test.c:4:0:
+treemap.c: In function 'searchTreeMap':
+treemap.c:77:1: error: stray '\302' in program
+ ¿        if (is_equal(tree, tree->current->pair->key, key)) return tree->current->pair ;
+ ^
+treemap.c:77:2: error: stray '\277' in program
+ ¿        if (is_equal(tree, tree->current->pair->key, key)) return tree->current->pair ;
+  ^
+treemap.c:80:1: error: stray '\302' in program
+ ¿            tree->current = tree->current->right ;
+ ^
+treemap.c:80:2: error: stray '\277' in program
+ ¿            tree->current = tree->current->right ;
+  ^
+treemap.c:83:1: error: stray '\302' in program
+ ¿            tree->current  = tree->current->left ;
+ ^
+treemap.c:83:2: error: stray '\277' in program
+ ¿            tree->current  = tree->current->left ;
+  ^
+c3f4684
