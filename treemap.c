@@ -195,7 +195,7 @@ Pair * nextTreeMap(TreeMap * tree) {
     }
     
     else {
-        siguiente = tree->current->pair ;
-        return siguiente ;
+        siguiente = tree->current ;
+        return siguiente->pair ;
     }
 }
