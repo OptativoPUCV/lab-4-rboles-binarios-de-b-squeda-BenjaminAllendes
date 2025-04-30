@@ -552,3 +552,17 @@ Tue, Apr 29, 2025 11:30:15 PM:
  1 file changed, 2 insertions(+), 4 deletions(-)
  tests:  0|0
 15b30e4
+Tue, Apr 29, 2025 11:33:06 PM: 
+ treemap.c | 4 ++++
+ 1 file changed, 4 insertions(+)
+Compilation failed
+In file included from test.c:4:0:
+treemap.c: In function 'removeNode':
+treemap.c:112:13: error: expected ';' before 'node'
+             node->right->parent = node->parent ;
+             ^~~~
+treemap.c:115:58: error: 'nodo' undeclared (first use in this function)
+             if (node->left != NULL) node->parent->left = nodo->left ;
+                                                          ^~~~
+treemap.c:115:58: note: each undeclared identifier is reported only once for each function it appears in
+70478c3
