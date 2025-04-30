@@ -71,7 +71,7 @@ void eraseTreeMap(TreeMap * tree, void* key){
 
 
 Pair * searchTreeMap(TreeMap * tree, void* key) {
-    if (tree->current == NULL) tree->current = tree->root ;
+    tree->current = tree->root ;
     while (tree->current->left != NULL && tree->current->right != NULL)
     {
         printf("IN") ;
