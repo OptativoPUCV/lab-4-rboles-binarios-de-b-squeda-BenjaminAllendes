@@ -521,3 +521,23 @@ Tue, Apr 29, 2025 11:07:21 PM:
  tests:  15|4
 total_score: 25/70
 50c0382
+Tue, Apr 29, 2025 11:27:46 PM: 
+ treemap.c | 27 +++++++++++++++++++++++++++
+ 1 file changed, 27 insertions(+)
+Compilation failed
+In file included from test.c:4:0:
+treemap.c: In function 'removeNode':
+treemap.c:96:9: error: expected ';' before '}' token
+         }
+         ^
+treemap.c:110:17: error: 'nodo' undeclared (first use in this function)
+             if (nodo->left != NULL) node->parent->right = nodo->left ;
+                 ^~~~
+treemap.c:110:17: note: each undeclared identifier is reported only once for each function it appears in
+treemap.c:112:9: error: expected ';' before '}' token
+         }
+         ^
+treemap.c:116:9: error: expected ';' before '}' token
+         }
+         ^
+4d3f8f5
