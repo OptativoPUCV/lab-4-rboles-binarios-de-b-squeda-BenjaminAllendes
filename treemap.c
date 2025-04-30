@@ -72,7 +72,7 @@ void eraseTreeMap(TreeMap * tree, void* key){
 
 Pair * searchTreeMap(TreeMap * tree, void* key) {
     tree->current = tree->root ;
-    while (tree->current->left != NULL || tree->current->right != NULL)
+    while (tree->current != NULL)
     {
         printf("CLAVE %d\n", (int) tree->current->pair->key) ;
         if (is_equal(tree, tree->current->pair->key, key)) return tree->current->pair ;
