@@ -255,3 +255,30 @@ Tue, Apr 29, 2025  8:53:49 PM:
  tests:  11|6
 total_score: 15/70
 917492e
+Tue, Apr 29, 2025  8:57:47 PM: 
+ treemap.c | 13 +++++++++++++
+ 1 file changed, 13 insertions(+)
+Compilation failed
+In file included from test.c:4:0:
+treemap.c: In function 'insertTreeMap':
+treemap.c:48:22: error: too many arguments to function 'createTreeMap'
+     TreeNode *nodo = createTreeMap(key, value) ;
+                      ^~~~~~~~~~~~~
+treemap.c:39:11: note: declared here
+ TreeMap * createTreeMap(int (*lower_than) (void* key1, void* key2)) {
+           ^~~~~~~~~~~~~
+treemap.c:48:22: error: initialization from incompatible pointer type [-Werror=incompatible-pointer-types]
+     TreeNode *nodo = createTreeMap(key, value) ;
+                      ^~~~~~~~~~~~~
+test.c:503:5: error: 'main' is normally a non-static function [-Werror=main]
+ int main( int argc, char *argv[] ) {
+     ^~~~
+test.c:606:1: error: expected declaration or statement at end of input
+ }
+ ^
+At top level:
+test.c:503:5: error: 'main' defined but not used [-Werror=unused-function]
+ int main( int argc, char *argv[] ) {
+     ^~~~
+cc1.exe: all warnings being treated as errors
+2e5824f
