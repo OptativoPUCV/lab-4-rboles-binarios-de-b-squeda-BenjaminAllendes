@@ -49,6 +49,7 @@ void insertTreeMap(TreeMap * tree, void* key, void * value) {
     if (tree->root == NULL) {
         tree->root = nodo ;
     }
+    tree->current = tree->root ;
     while (tree->current != NULL){
         if (is_equal(tree, tree->current->pair->key, key)) return ;
         int resultado = tree->lower_than(tree->current->pair->key, key) ;
