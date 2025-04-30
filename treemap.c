@@ -102,6 +102,11 @@ void removeNode(TreeMap * tree, TreeNode* node) {
     }
 
     if (node->right != NULL && node->left != NULL){
+        TreeNode *nodoDere = node->right ;
+        TreeNode *dereMin = minimum(nodoDere) ;
+        node->pair->key = dereMin->pair->key ;
+        node->pair->value = dereMin->pair->value ;
+        removeNode(tree, dereMin) ;
 
         return ;
     }
