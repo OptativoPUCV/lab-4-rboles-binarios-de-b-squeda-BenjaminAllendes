@@ -73,6 +73,7 @@ void insertTreeMap(TreeMap * tree, void* key, void * value) {
                 nodoAux->left = nodo ;
                 nodo->parent = nodoAux ; 
             }
+            tree->current = nodo ;
         }
     }
 }
