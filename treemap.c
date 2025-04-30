@@ -84,7 +84,7 @@ Pair * searchTreeMap(TreeMap * tree, void* key) {
             tree->current  = tree->current->left ;
         }
     }
-    printf("XDDDD")
+    printf("XDDDD") ;
     return NULL;
 }
 
