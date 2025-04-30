@@ -62,8 +62,11 @@ void insertTreeMap(TreeMap * tree, void* key, void * value) {
             printf("Hola") ;
             tree->current  = tree->current->left ;
         }
+        if (tree->current == NULL) {
+            
+        }
     }
-    tree->current = nodo ;
+    
 }
 
 TreeNode * minimum(TreeNode * x){
