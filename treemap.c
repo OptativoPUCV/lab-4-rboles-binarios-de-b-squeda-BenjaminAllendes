@@ -59,6 +59,7 @@ void insertTreeMap(TreeMap * tree, void* key, void * value) {
             tree->current = tree->current->right ;
         }
         else {
+            printf("Hola") ;
             tree->current  = tree->current->left ;
         }
     }
