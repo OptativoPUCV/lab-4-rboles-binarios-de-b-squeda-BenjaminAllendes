@@ -679,3 +679,27 @@ treemap.c:199:1: error: control reaches end of non-void function [-Werror=return
  ^
 cc1.exe: all warnings being treated as errors
 6b3233b
+Wed, Apr 30, 2025  1:05:28 AM: 
+ treemap.c | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+Compilation failed
+In file included from test.c:4:0:
+treemap.c: In function 'nextTreeMap':
+treemap.c:177:9: error: 'node' undeclared (first use in this function)
+     if (node->current->parent == NULL) {
+         ^~~~
+treemap.c:177:9: note: each undeclared identifier is reported only once for each function it appears in
+treemap.c:180:9: error: expected ';' before 'return'
+         return siguiente->pair ;
+         ^~~~~~
+treemap.c:182:39: error: 'TreeNode {aka struct TreeNode}' has no member named 'key'
+     if (tree->lower_than(tree->current->key, tree->root)){
+                                       ^~
+treemap.c:183:43: error: 'TreeNode {aka struct TreeNode}' has no member named 'key'
+         if (tree->lower_than(tree->current->key, tree->current->parent)){
+                                           ^~
+treemap.c:199:1: error: control reaches end of non-void function [-Werror=return-type]
+ }
+ ^
+cc1.exe: all warnings being treated as errors
+d6f81ff
