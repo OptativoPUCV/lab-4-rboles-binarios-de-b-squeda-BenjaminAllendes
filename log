@@ -282,3 +282,20 @@ test.c:503:5: error: 'main' defined but not used [-Werror=unused-function]
      ^~~~
 cc1.exe: all warnings being treated as errors
 2e5824f
+Tue, Apr 29, 2025  8:58:03 PM: 
+ treemap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Compilation failed
+test.c: In function 'insertTreeMap':
+test.c:503:5: error: 'main' is normally a non-static function [-Werror=main]
+ int main( int argc, char *argv[] ) {
+     ^~~~
+test.c:606:1: error: expected declaration or statement at end of input
+ }
+ ^
+At top level:
+test.c:503:5: error: 'main' defined but not used [-Werror=unused-function]
+ int main( int argc, char *argv[] ) {
+     ^~~~
+cc1.exe: all warnings being treated as errors
+9036102
