@@ -198,4 +198,6 @@ Pair * nextTreeMap(TreeMap * tree) {
         siguiente = tree->current ;
         return siguiente->pair ;
     }
+    siguiente = tree->current ;
+    return siguiente->pair ;
 }
