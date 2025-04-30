@@ -60,6 +60,7 @@ void insertTreeMap(TreeMap * tree, void* key, void * value) {
         }
         else {
             tree->current  = tree->current->left ;
+        }
     }
     
 }
