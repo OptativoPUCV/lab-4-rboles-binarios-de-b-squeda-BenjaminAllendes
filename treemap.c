@@ -228,5 +228,6 @@ Pair * nextTreeMap(TreeMap * tree) {
         }
 
     }
+    printf("Wut") ;
     return NULL ;
 }
