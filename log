@@ -977,3 +977,9 @@ treemap.c:206:9: error: expected ';' before 'if'
          if (tree->current->left != NULL && tree->lower_than(tree->current, minimum(tree->current))){
          ^~
 de840b4
+Thu, May  1, 2025 12:44:28 AM: 
+ treemap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  21|2
+total_score: 50/70
+190dae7

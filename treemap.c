@@ -202,7 +202,7 @@ Pair * nextTreeMap(TreeMap * tree) {
         }
     }
     else {
-        printf("Debuging")
+        printf("Debuging") ;
         if (tree->current->left != NULL && tree->lower_than(tree->current, minimum(tree->current))){
             if (tree->lower_than(tree->current->pair->key, tree->current->parent->pair->key) && tree->current->right == NULL){
                 siguiente = tree->current->parent ;
