@@ -895,3 +895,13 @@ treemap.c:187:13: error: expected ';' before 'siguiente'
              siguiente = tree->current->parent ;
              ^~~~~~~~~
 905183a
+Thu, May  1, 2025 12:35:19 AM: 
+ treemap.c | 1 +
+ 1 file changed, 1 insertion(+)
+Compilation failed
+In file included from test.c:4:0:
+treemap.c: In function 'nextTreeMap':
+treemap.c:187:13: error: expected ';' before 'siguiente'
+             siguiente = tree->current->parent ;
+             ^~~~~~~~~
+ea6c8d7
