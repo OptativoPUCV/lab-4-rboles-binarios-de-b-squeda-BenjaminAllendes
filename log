@@ -777,3 +777,30 @@ Thu, May  1, 2025 12:16:21 AM:
  tests:  20|2
 total_score: 45/70
 d7ee8d0
+Thu, May  1, 2025 12:22:11 AM: 
+ treemap.c | 23 +++++++++++++++++++++++
+ 1 file changed, 23 insertions(+)
+Compilation failed
+In file included from test.c:4:0:
+treemap.c: In function 'nextTreeMap':
+treemap.c:218:17: error: statement with no effect [-Werror=unused-value]
+             tree->current siguiente ;
+             ~~~~^~~~~~~~~
+treemap.c:218:27: error: expected ';' before 'siguiente'
+             tree->current siguiente ;
+                           ^~~~~~~~~
+test.c:503:5: error: 'main' is normally a non-static function [-Werror=main]
+ int main( int argc, char *argv[] ) {
+     ^~~~
+test.c:606:1: error: expected declaration or statement at end of input
+ }
+ ^
+test.c:606:1: error: control reaches end of non-void function [-Werror=return-type]
+ }
+ ^
+At top level:
+test.c:503:5: error: 'main' defined but not used [-Werror=unused-function]
+ int main( int argc, char *argv[] ) {
+     ^~~~
+cc1.exe: all warnings being treated as errors
+72b7ec5
