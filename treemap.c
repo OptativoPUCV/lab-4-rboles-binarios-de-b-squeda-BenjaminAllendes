@@ -185,7 +185,7 @@ Pair * nextTreeMap(TreeMap * tree) {
             siguiente = tree->current->parent ;
             tree->current = siguiente ;
             
-            return siguiente->pair ;
+            return tree->current->pair ;
         }
         else if (tree->lower_than(tree->current->parent->pair->key, tree->current->pair->key)){
             siguiente = tree->current->parent->parent ;
