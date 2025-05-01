@@ -760,3 +760,14 @@ Wed, Apr 30, 2025  9:52:58 AM:
  tests:  20|2
 total_score: 45/70
 31f3a92
+Thu, May  1, 2025 12:15:44 AM: 
+ treemap.c | 17 +++++++++++++++++
+ 1 file changed, 17 insertions(+)
+Compilation failed
+In file included from test.c:4:0:
+treemap.c: In function 'nextTreeMap':
+treemap.c:191:20: error: return from incompatible pointer type [-Werror=incompatible-pointer-types]
+             return siguiente ;
+                    ^~~~~~~~~
+cc1.exe: all warnings being treated as errors
+dcd0882

@@ -179,6 +179,23 @@ Pair * nextTreeMap(TreeMap * tree) {
         tree->current = siguiente ;
         return siguiente->pair ;
     }
-    
+    if (tree->lower_than(tree->current->pair->key, tree->root)){
+        if (tree->lower_than(tree->current->pair->key, tree->current->parent->pair->key)){
+            siguiente = tree->current->parent ;
+            tree->current = siguiente ;
+            return siguiente->pair ;
+        }
+        else if (tree->lower_than(tree->current->parent->pair->key, tree->current->pair->key)){
+            siguiente = tree->current->parent->parent ;
+            tree->current = siguiente ;
+            return siguiente ;
+        }
+        else {
+            siguiente = tree->current->parent->right ;
+            tree->current = siguiente ;
+            return siguiente->pair ;
+        }
+    }
+
     return NULL ;
 }
