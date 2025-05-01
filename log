@@ -848,3 +848,14 @@ Thu, May  1, 2025 12:29:26 AM:
  tests:  20|2
 total_score: 45/70
 94668d4
+Thu, May  1, 2025 12:30:11 AM: 
+ treemap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Compilation failed
+In file included from test.c:4:0:
+treemap.c: In function 'nextTreeMap':
+treemap.c:187:23: error: format '%s' expects argument of type 'char *', but argument 2 has type 'void *' [-Werror=format=]
+             printf(" %s", tree->current->pair->key) ;
+                       ^
+cc1.exe: all warnings being treated as errors
+98b19fd
