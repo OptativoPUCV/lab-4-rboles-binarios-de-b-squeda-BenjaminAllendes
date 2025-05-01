@@ -873,3 +873,9 @@ treemap.c:187:23: error: format '%s' expects argument of type 'char *', but argu
                        ^
 cc1.exe: all warnings being treated as errors
 6f8d887
+Thu, May  1, 2025 12:30:49 AM: 
+ treemap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  20|2
+total_score: 45/70
+65c5a14
