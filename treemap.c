@@ -174,7 +174,11 @@ Pair * firstTreeMap(TreeMap * tree) {
 
 Pair * nextTreeMap(TreeMap * tree) {
     TreeNode *siguiente ;
-    
+    if (tree->current->parent == NULL) {
+        siguiente = tree->current->right ;
+        tree->current = siguiente ;
+        return siguiente->pair ;
+    }
     printf("Primer debug") ;
     if (tree->lower_than(tree->current->pair->key, tree->root)){
 
