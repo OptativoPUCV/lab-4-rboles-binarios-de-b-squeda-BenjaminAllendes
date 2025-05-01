@@ -181,16 +181,17 @@ Pair * nextTreeMap(TreeMap * tree) {
     }
     printf("Primer debug") ;
     if (tree->lower_than(tree->current->pair->key, tree->root)){
+
         if (tree->lower_than(tree->current->pair->key, tree->current->parent->pair->key)){
+            printf("Primer debug")
             siguiente = tree->current->parent ;
             tree->current = siguiente ;
-            printf(" %d", (int) tree->current->pair->key) ;
             return tree->current->pair ;
         }
         else if (tree->lower_than(tree->current->parent->pair->key, tree->current->pair->key)){
-            siguiente = tree->current->parent->parent ;
-            tree->current = siguiente ;
-            return siguiente->pair ;
+            while (tree->lower_than(tree->current->parent->pair->key, tree->current->pair->key)){
+                tree->current = tree->current->parent ;
+            }
         }
         else if (tree->current->right != NULL ){
             siguiente = tree->current->parent->right ;
