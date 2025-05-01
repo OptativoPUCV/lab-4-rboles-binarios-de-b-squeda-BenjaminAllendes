@@ -179,6 +179,7 @@ Pair * nextTreeMap(TreeMap * tree) {
         tree->current = siguiente ;
         return siguiente->pair ;
     }
+    printf("Primer debug") ;
     if (tree->lower_than(tree->current->pair->key, tree->root)){
         if (tree->lower_than(tree->current->pair->key, tree->current->parent->pair->key)){
             siguiente = tree->current->parent ;
