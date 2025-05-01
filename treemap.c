@@ -196,7 +196,7 @@ Pair * nextTreeMap(TreeMap * tree) {
             return tree->current->pair ;
         }
         else if (tree->current->right != NULL ){
-            printf("mas debug")
+            printf("mas debugsss") ;
             siguiente = tree->current->parent->right ;
             tree->current = siguiente ;
             return siguiente->pair ;
