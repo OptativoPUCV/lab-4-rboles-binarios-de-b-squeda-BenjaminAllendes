@@ -1010,3 +1010,13 @@ Thu, May  1, 2025 12:49:14 AM:
  1 file changed, 1 insertion(+), 5 deletions(-)
  tests:  0|0
 d0e1cf4
+Thu, May  1, 2025 12:50:52 AM: 
+ treemap.c | 5 ++++-
+ 1 file changed, 4 insertions(+), 1 deletion(-)
+Compilation failed
+In file included from test.c:4:0:
+treemap.c: In function 'nextTreeMap':
+treemap.c:179:29: error: 'TreeNode {aka struct TreeNode}' has no member named 'key'
+         return tree->current->key ;
+                             ^~
+8e18c4a
