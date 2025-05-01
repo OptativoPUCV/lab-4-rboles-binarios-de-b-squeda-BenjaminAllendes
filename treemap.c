@@ -221,7 +221,7 @@ Pair * nextTreeMap(TreeMap * tree) {
             }
         }
         else {
-            printf("Debuging")
+            printf("Debugewdwing") ;
             siguiente = tree->current->right ;
             tree->current = siguiente ;
             return siguiente->pair ;
