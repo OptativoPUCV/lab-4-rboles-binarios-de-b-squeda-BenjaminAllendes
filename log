@@ -957,3 +957,13 @@ Thu, May  1, 2025 12:43:01 AM:
  tests:  21|2
 total_score: 50/70
 2a3bb8d
+Thu, May  1, 2025 12:44:15 AM: 
+ treemap.c | 2 ++
+ 1 file changed, 2 insertions(+)
+Compilation failed
+In file included from test.c:4:0:
+treemap.c: In function 'nextTreeMap':
+treemap.c:206:9: error: expected ';' before 'if'
+         if (tree->current->left != NULL && tree->lower_than(tree->current, minimum(tree->current))){
+         ^~
+bcaacd0
