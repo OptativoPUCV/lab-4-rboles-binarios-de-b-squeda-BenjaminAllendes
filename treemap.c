@@ -167,8 +167,7 @@ Pair * upperBound(TreeMap * tree, void* key) {
     TreeNode *nodo = NULL;
 
     while (current != NULL) {
-        // Si current->key >= key
-        if (!tree->lower_than(current->pair->key, key)) {
+        if (tree->lower_than(current->pair->key, key) == 0) {
             nodo = current;
             current = current->left;
         } else {
