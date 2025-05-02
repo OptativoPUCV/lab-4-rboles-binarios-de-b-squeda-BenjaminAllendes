@@ -163,6 +163,10 @@ Pair * searchTreeMap(TreeMap * tree, void* key) {
 
 
 Pair * upperBound(TreeMap * tree, void* key) {
+    Pair *par = searchTreeMap(tree, key) ;
+    if (par != NULL) return par ;
+
+    
     return NULL;
 }
 
@@ -177,14 +181,12 @@ Pair * nextTreeMap(TreeMap * tree) {
 
     if (node == NULL) return NULL;
 
-    // Caso 1: Si hay hijo derecho, el sucesor es el mínimo del subárbol derecho
     if (node->right != NULL) {
         node = minimum(node->right);
         tree->current = node;
         return node->pair;
     }
 
-    // Caso 2: Buscar el primer ancestro donde venimos desde el hijo izquierdo
     TreeNode *parent = node->parent;
     while (parent != NULL && node == parent->right) {
         node = parent;
