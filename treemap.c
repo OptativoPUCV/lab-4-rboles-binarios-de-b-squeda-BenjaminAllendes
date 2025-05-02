@@ -190,7 +190,7 @@ Pair * nextTreeMap(TreeMap * tree) {
             }
             else if (tree->lower_than(tree->current->parent->pair->key, tree->current->pair->key) && tree->current->right == NULL){
                 TreeNode *aux = tree->current ;
-                while (tree->lower_than(tree->current->parent->pair->key, aux->pair->key)){
+                while (tree->lower_than(tree->current->pair->key, aux->pair->key)){
                     tree->current = tree->current->parent ;
                 }
                 printf("mas debug") ;
