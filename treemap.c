@@ -167,12 +167,11 @@ Pair * upperBound(TreeMap * tree, void* key) {
     TreeNode *nodo = NULL;
 
     while (current != NULL) {
-        if (tree->lower_than(key, current->pair->key)) {
-            // current->key es > key, puede ser un candidato
+        // Si current->key >= key
+        if (!tree->lower_than(current->pair->key, key)) {
             nodo = current;
             current = current->left;
         } else {
-            // current->key <= key, upper bound está a la derecha
             current = current->right;
         }
     }
