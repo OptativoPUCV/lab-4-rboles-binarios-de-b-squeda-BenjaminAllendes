@@ -181,28 +181,8 @@ Pair * nextTreeMap(TreeMap * tree) {
     printf("Primer debug") ;
     if (tree->lower_than(tree->current->pair->key, tree->root)){
         printf("tomorrowwwwwwwwww") ;
-        if (tree->current->left != NULL && tree->lower_than(tree->current, minimum(tree->current))){
-            printf("al menos funciona esto") ;
-            if (tree->lower_than(tree->current->pair->key, tree->current->parent->pair->key) && tree->current->right == NULL){
-                siguiente = tree->current->parent ;
-                tree->current = siguiente ;
-                return siguiente->pair ;
-            }
-            else if (tree->lower_than(tree->current->parent->pair->key, tree->current->pair->key) && tree->current->right == NULL){
-                TreeNode *aux = tree->current ;
-                while (tree->lower_than(tree->current->pair->key, aux->pair->key)){
-                    tree->current = tree->current->parent ;
-                }
-                printf("mas debug") ;
-                return tree->current->pair ;
-            }
-            else if (tree->current->right != NULL ){
-                siguiente = tree->current->parent->right ;
-                tree->current = siguiente ;
-                return siguiente->pair ;
-            }
-        }
-        else if (tree->lower_than(tree->current->pair->key, tree->current->parent->pair->key) && tree->current->right == NULL){
+        
+        if (tree->lower_than(tree->current->pair->key, tree->current->parent->pair->key) && tree->current->right == NULL){
             printf("DEBUGGIN") ;
             siguiente = tree->current->parent ;
             tree->current = siguiente ;
