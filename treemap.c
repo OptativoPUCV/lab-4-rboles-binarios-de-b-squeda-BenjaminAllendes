@@ -180,6 +180,7 @@ Pair * nextTreeMap(TreeMap * tree) {
     }
     printf("Primer debug") ;
     if (tree->lower_than(tree->current->pair->key, tree->root)){
+        printf("tomorrowwwwwwwwww") ;
 
         if (tree->lower_than(tree->current->pair->key, tree->current->parent->pair->key) && tree->current->right == NULL){
             printf("DEBUGGIN") ;
