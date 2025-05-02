@@ -1198,3 +1198,9 @@ treemap.c:182:16: error: 'candidate' undeclared (first use in this function)
                 ^~~~~~~~~
 treemap.c:182:16: note: each undeclared identifier is reported only once for each function it appears in
 e974450
+Fri, May  2, 2025 12:54:02 AM: 
+ treemap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  25|1
+total_score: 60/70
+9f0b04a
