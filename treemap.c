@@ -182,6 +182,7 @@ Pair * nextTreeMap(TreeMap * tree) {
     if (tree->lower_than(tree->current->pair->key, tree->root)){
         printf("tomorrowwwwwwwwww") ;
         if (tree->current->left != NULL && tree->lower_than(tree->current, minimum(tree->current))){
+            printf("al menos funciona esto") ;
             if (tree->lower_than(tree->current->pair->key, tree->current->parent->pair->key) && tree->current->right == NULL){
                 siguiente = tree->current->parent ;
                 tree->current = siguiente ;
