@@ -1099,3 +1099,14 @@ Fri, May  2, 2025 12:37:03 AM:
  tests:  26|1
 total_score: 60/70
 21551ab
+Fri, May  2, 2025 12:37:31 AM: 
+ treemap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Compilation failed
+In file included from test.c:4:0:
+treemap.c: In function 'upperBound':
+treemap.c:181:25: error: return from incompatible pointer type [-Werror=incompatible-pointer-types]
+     return tree->current->parent;
+            ~~~~~~~~~~~~~^~~~~~~~
+cc1.exe: all warnings being treated as errors
+06db5af
