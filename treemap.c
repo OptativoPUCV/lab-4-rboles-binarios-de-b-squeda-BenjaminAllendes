@@ -181,6 +181,7 @@ Pair * upperBound(TreeMap * tree, void* key) {
         }
         if (tree->current != NULL && tree->lower_than(node->pair->key, tree->current->pair->key) && tree->lower_than(tree->current->pair->key, key)) {
             node = tree->current ;
+            printf("Se cumple =ded") ;
         }
     }
     
