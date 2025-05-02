@@ -179,7 +179,7 @@ Pair * upperBound(TreeMap * tree, void* key) {
         else {
             tree->current  = tree->current->left ;
         }
-        if (tree->lower_than(tree->current->pair->key, node->pair->key) && tree->lower_than(key, tree->current)) {
+        if (tree->current != NULL && tree->lower_than(tree->current->pair->key, node->pair->key) && tree->lower_than(key, tree->current)) {
             node = tree->current ;
         }
     }
