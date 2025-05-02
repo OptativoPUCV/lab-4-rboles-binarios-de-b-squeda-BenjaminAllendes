@@ -173,62 +173,27 @@ Pair * firstTreeMap(TreeMap * tree) {
 }
 
 Pair * nextTreeMap(TreeMap * tree) {
-    TreeNode *siguiente ;
-    if(tree->current == tree->root && tree->root->right != NULL){
-        tree->current = minimum(tree->current->right) ;
-        return tree->current->pair ;
-    }
-    printf("Primer debug") ;
-    if (tree->lower_than(tree->current->pair->key, tree->root)){
-        printf("tomorrowwwwwwwwww") ;
-        
-        if (tree->lower_than(tree->current->pair->key, tree->current->parent->pair->key) && tree->current->right == NULL){
-            printf("DEBUGGIN") ;
-            siguiente = tree->current->parent ;
-            tree->current = siguiente ;
-            return tree->current->pair ;
-        }
-        else if (tree->lower_than(tree->current->pair->key, tree->current->pair->key) && tree->current->right == NULL){
-            TreeNode *aux = tree->current ;
-            while (tree->lower_than(tree->current->parent->pair->key, aux->pair->key)){
-                tree->current = tree->current->parent ;
-            }
-            printf("mas debug") ;
-            return tree->current->pair ;
-        }
-        else if (tree->current->right != NULL ){
-            siguiente = tree->current->right ;
-            tree->current = siguiente ;
-            return siguiente->pair ;
-        }
-    }
-    else {
-        printf("Debuging") ;
-        if (tree->current->left != NULL && tree->lower_than(tree->current, minimum(tree->current))){
-            if (tree->lower_than(tree->current->pair->key, tree->current->parent->pair->key) && tree->current->right == NULL){
-                siguiente = tree->current->parent ;
-                tree->current = siguiente ;
-                return siguiente->pair ;
-            }
-            else if (tree->lower_than(tree->current->parent->pair->key, tree->current->pair->key) && tree->current->right == NULL){
-                siguiente = tree->current->parent->parent ;
-                tree->current = siguiente ;
-                return siguiente->pair ;
-            }
-            else if (tree->current->right != NULL ){
-                siguiente = tree->current->parent->right ;
-                tree->current = siguiente ;
-                return siguiente->pair ;
-            }
-        }
-        else {
-            printf("Debugewdwing") ;
-            siguiente = tree->current->right ;
-            tree->current = siguiente ;
-            return siguiente->pair ;
-        }
+    TreeNode *node = tree->current;
 
+    if (node == NULL) return NULL;
+
+    // Caso 1: Si hay hijo derecho, el sucesor es el mínimo del subárbol derecho
+    if (node->right != NULL) {
+        node = minimum(node->right);
+        tree->current = node;
+        return node->pair;
     }
-    printf("Wut") ;
-    return NULL ;
+
+    // Caso 2: Buscar el primer ancestro donde venimos desde el hijo izquierdo
+    TreeNode *parent = node->parent;
+    while (parent != NULL && node == parent->right) {
+        node = parent;
+        parent = parent->parent;
+    }
+
+    tree->current = parent;
+    if (parent != NULL)
+        return parent->pair;
+    else
+        return NULL;
 }
